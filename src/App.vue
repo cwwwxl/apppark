@@ -1,10 +1,10 @@
 <template>
   <div class="app-container">
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component, route }">
       <keep-alive>
-        <component :is="Component" v-if="$route.meta.tab" />
+        <component :is="Component" :key="route.path" v-if="route.meta.tab" />
       </keep-alive>
-      <component :is="Component" v-if="!$route.meta.tab" />
+      <component :is="Component" :key="route.path" v-if="!route.meta.tab" />
     </router-view>
     <div class="tab-bar" v-if="showTabBar">
       <div class="tab-item" v-for="tab in tabs" :key="tab.path"
