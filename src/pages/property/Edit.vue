@@ -55,6 +55,14 @@
         </div>
       </div>
       <div class="form-group">
+        <label class="form-label"><span class="required">*</span>联系人</label>
+        <input class="form-input" v-model="form.contact" placeholder="请输入联系人姓名" />
+      </div>
+      <div class="form-group">
+        <label class="form-label"><span class="required">*</span>联系电话</label>
+        <input class="form-input" v-model="form.phone" type="tel" placeholder="请输入联系电话" />
+      </div>
+      <div class="form-group">
         <label class="form-label">配套设施</label>
         <input class="form-input" v-model="form.facilities" placeholder="如：空调/网络/停车位" />
       </div>
@@ -99,11 +107,13 @@ const form = reactive({
   rentPrice: existing?.rentPrice || '',
   sellPrice: existing?.sellPrice || '',
   deposit: existing?.deposit || '',
+  contact: existing?.contact || '',
+  phone: existing?.phone || '',
   facilities: existing?.facilities || '',
 })
 
 function submit() {
-  if (!form.name || !form.code || !form.building || !form.area || !form.type || !form.rentPrice) {
+  if (!form.name || !form.code || !form.building || !form.area || !form.type || !form.rentPrice || !form.contact || !form.phone) {
     alert('请填写所有必填项')
     return
   }

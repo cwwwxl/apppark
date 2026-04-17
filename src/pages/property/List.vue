@@ -40,6 +40,7 @@
         </div>
       </div>
       <div class="prop-facilities">{{ p.facilities }}</div>
+      <div class="prop-contact">联系人：{{ p.contact }} · {{ p.phone }}</div>
       <div class="prop-tenant" v-if="p.tenant">当前租户：{{ p.tenant }}</div>
     </div>
 
@@ -97,6 +98,7 @@ const filtered = computed(() => {
 .price-sell { font-size: 12px; color: #9B6BFF; margin-left: 8px; }
 .prop-meta { font-size: 12px; color: #bbb; display: flex; gap: 8px; }
 .prop-facilities { font-size: 12px; color: #999; padding-top: 8px; border-top: 1px solid #F5F5F5; }
+.prop-contact { font-size: 13px; color: #666; margin-top: 6px; }
 .prop-tenant { font-size: 13px; color: #4A90D9; margin-top: 6px; font-weight: 500; }
 .empty { text-align: center; padding: 60px 0; color: #ccc; font-size: 15px; }
 </style>

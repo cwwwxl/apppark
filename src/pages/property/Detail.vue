@@ -33,6 +33,8 @@
       <div class="info-row"><span class="info-label">户型</span><span>{{ prop.type }}</span></div>
       <div class="info-row"><span class="info-label">朝向</span><span>{{ prop.orientation }}</span></div>
       <div class="info-row"><span class="info-label">押付方式</span><span>{{ prop.deposit }}</span></div>
+      <div class="info-row"><span class="info-label">联系人</span><span>{{ prop.contact }}</span></div>
+      <div class="info-row"><span class="info-label">电话</span><span style="color:#4A90D9">{{ prop.phone }}</span></div>
       <div class="info-row"><span class="info-label">配套设施</span><span>{{ prop.facilities }}</span></div>
       <div class="info-row"><span class="info-label">发布时间</span><span>{{ prop.publishTime }}</span></div>
       <div class="info-row"><span class="info-label">浏览次数</span><span>{{ prop.views }}次</span></div>

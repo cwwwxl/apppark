@@ -56,12 +56,12 @@ export const operationLogs = [
 
 // ============ 房源/场地管理 ============
 export const properties = [
-  { id: 'P001', code: 'A-1201', name: 'A栋12层01室', building: 'A栋', floor: '12层', area: 120, type: '办公室', orientation: '南', facilities: '空调/网络/停车位', rentPrice: 8500, sellPrice: 0, deposit: '押二付一', status: 'available', images: 3, views: 45, publishTime: '2026-04-01' },
-  { id: 'P002', code: 'A-1202', name: 'A栋12层02室', building: 'A栋', floor: '12层', area: 85, type: '办公室', orientation: '北', facilities: '空调/网络', rentPrice: 6200, sellPrice: 0, deposit: '押二付一', status: 'negotiating', images: 5, views: 32, publishTime: '2026-03-20' },
-  { id: 'P003', code: 'B-0301', name: 'B栋3层大厅', building: 'B栋', floor: '3层', area: 350, type: '展厅', orientation: '东南', facilities: '空调/网络/货梯/停车位', rentPrice: 25000, sellPrice: 1800000, deposit: '押三付一', status: 'rented', images: 8, views: 128, publishTime: '2026-02-15', tenant: '星辰传媒' },
-  { id: 'P004', code: 'C-0101', name: 'C栋1层仓储区', building: 'C栋', floor: '1层', area: 500, type: '仓库', orientation: '西', facilities: '货梯/停车位/监控', rentPrice: 15000, sellPrice: 0, deposit: '押二付一', status: 'available', images: 4, views: 67, publishTime: '2026-04-10' },
-  { id: 'P005', code: 'A-0801', name: 'A栋8层整层', building: 'A栋', floor: '8层', area: 680, type: '办公室', orientation: '南', facilities: '空调/网络/会议室/停车位', rentPrice: 45000, sellPrice: 3200000, deposit: '押三付一', status: 'sold', images: 12, views: 256, publishTime: '2026-01-10', tenant: '远景能源' },
-  { id: 'P006', code: 'D-0201', name: 'D栋2层场地', building: 'D栋', floor: '2层', area: 200, type: '活动场地', orientation: '东', facilities: '空调/投影/音响/停车位', rentPrice: 12000, sellPrice: 0, deposit: '押一付一', status: 'available', images: 6, views: 89, publishTime: '2026-04-05' },
+  { id: 'P001', code: 'A-1201', name: 'A栋12层01室', building: 'A栋', floor: '12层', area: 120, type: '办公室', orientation: '南', facilities: '空调/网络/停车位', rentPrice: 8500, sellPrice: 0, deposit: '押二付一', status: 'available', contact: '李明', phone: '138****1234', images: 3, views: 45, publishTime: '2026-04-01' },
+  { id: 'P002', code: 'A-1202', name: 'A栋12层02室', building: 'A栋', floor: '12层', area: 85, type: '办公室', orientation: '北', facilities: '空调/网络', rentPrice: 6200, sellPrice: 0, deposit: '押二付一', status: 'negotiating', contact: '张经理', phone: '139****5678', images: 5, views: 32, publishTime: '2026-03-20' },
+  { id: 'P003', code: 'B-0301', name: 'B栋3层大厅', building: 'B栋', floor: '3层', area: 350, type: '展厅', orientation: '东南', facilities: '空调/网络/货梯/停车位', rentPrice: 25000, sellPrice: 1800000, deposit: '押三付一', status: 'rented', contact: '王芳', phone: '136****7777', images: 8, views: 128, publishTime: '2026-02-15', tenant: '星辰传媒' },
+  { id: 'P004', code: 'C-0101', name: 'C栋1层仓储区', building: 'C栋', floor: '1层', area: 500, type: '仓库', orientation: '西', facilities: '货梯/停车位/监控', rentPrice: 15000, sellPrice: 0, deposit: '押二付一', status: 'available', contact: '赵伟', phone: '158****3456', images: 4, views: 67, publishTime: '2026-04-10' },
+  { id: 'P005', code: 'A-0801', name: 'A栋8层整层', building: 'A栋', floor: '8层', area: 680, type: '办公室', orientation: '南', facilities: '空调/网络/会议室/停车位', rentPrice: 45000, sellPrice: 3200000, deposit: '押三付一', status: 'sold', contact: '刘洋', phone: '177****5555', images: 12, views: 256, publishTime: '2026-01-10', tenant: '远景能源' },
+  { id: 'P006', code: 'D-0201', name: 'D栋2层场地', building: 'D栋', floor: '2层', area: 200, type: '活动场地', orientation: '东', facilities: '空调/投影/音响/停车位', rentPrice: 12000, sellPrice: 0, deposit: '押一付一', status: 'available', contact: '陈静', phone: '185****9012', images: 6, views: 89, publishTime: '2026-04-05' },
 ]
 
 export const propertyStatusMap = { available: '待租售', negotiating: '洽谈中', rented: '已租赁', sold: '已售出' }
