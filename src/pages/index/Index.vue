@@ -4,7 +4,7 @@
     <div class="home-header">
       <div class="header-top">
         <div class="header-info">
-          <div class="header-title">园区访客管理</div>
+          <div class="header-title">园区智慧管理</div>
           <div class="header-sub">{{ company.name }}</div>
         </div>
         <div class="header-avatar">{{ company.contact.charAt(0) }}</div>
@@ -21,6 +21,10 @@
         <div class="stat-item">
           <div class="stat-num">{{ totalVisitors }}</div>
           <div class="stat-label">累计访客</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">{{ availableProps }}</div>
+          <div class="stat-label">待租房源</div>
         </div>
       </div>
     </div>
@@ -87,6 +91,37 @@
       </div>
     </div>
 
+    <!-- 租售管理 -->
+    <div class="section-header">租售管理</div>
+    <div class="card">
+      <div class="icon-grid">
+        <div class="icon-item" @click="go('/property/list')">
+          <div class="icon-box" style="background: linear-gradient(135deg, #FF6B8A, #FF8FA3)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          </div>
+          <span>房源管理</span>
+        </div>
+        <div class="icon-item" @click="go('/property/edit')">
+          <div class="icon-box" style="background: linear-gradient(135deg, #4A90D9, #6BA8E8)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <span>发布房源</span>
+        </div>
+        <div class="icon-item" @click="go('/order/list')">
+          <div class="icon-box" style="background: linear-gradient(135deg, #FF8C5A, #FFA875)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span>租售订单</span>
+        </div>
+        <div class="icon-item" @click="go('/stats/index')">
+          <div class="icon-box" style="background: linear-gradient(135deg, #9B6BFF, #B48FFF)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <span>数据统计</span>
+        </div>
+      </div>
+    </div>
+
     <!-- 其它 -->
     <div class="section-header">其它</div>
     <div class="card">
@@ -111,7 +146,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { currentCompany, qrcodeRecords, visitorRecords } from '../../utils/mock.js'
+import { currentCompany, qrcodeRecords, visitorRecords, properties } from '../../utils/mock.js'
 
 const router = useRouter()
 const company = currentCompany
@@ -119,6 +154,7 @@ const company = currentCompany
 const activeQr = computed(() => qrcodeRecords.filter(q => q.status === 'active').length)
 const todayVisitors = computed(() => visitorRecords.filter(v => v.verifyTime.includes('2026-04-17')).length || 2)
 const totalVisitors = computed(() => visitorRecords.length)
+const availableProps = computed(() => properties.filter(p => p.status === 'available').length)
 
 function go(path) {
   router.push(path)
